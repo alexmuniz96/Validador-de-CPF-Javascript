@@ -1,4 +1,6 @@
-//cpf verificando a quantidade de digitos
+const alertSuccess = document.querySelector('.sucess')
+const alertError = document.querySelector('.error')
+const input = document.getElementById('cpf_digitado')
 
 function validaCpf(cpf) {
   console.log(cpf.length)
@@ -44,17 +46,19 @@ function validaCpf(cpf) {
 }
 
 function validacao() {
-  console.log('cpf avaliado');
-  document.getElementById('sucess').style.display = 'none'
-  document.getElementById('failed').style.display = 'none'
+  alertSuccess.style.display = 'none'
+  alertError.style.display = 'none'
+  input.style.borderColor = 'initial'
 
-  var cpf = document.getElementById('cpf_digitado').value;
+  let cpf = document.getElementById('cpf_digitado').value;
 
-  var resutadoValidacacao = validaCpf(cpf);
+  var resultadoValidacacao = validaCpf(cpf);
 
-  if (resutadoValidacacao) {
-    document.getElementById('sucess').style.display = 'block'
+  if (resultadoValidacacao) {
+    alertSuccess.style.display = 'block'
+    input.style.borderColor = 'green'
   } else {
-    document.getElementById('failed').style.display = 'block'
+    alertError.style.display = 'block'
+    input.style.borderColor = 'red'
   }
 }
