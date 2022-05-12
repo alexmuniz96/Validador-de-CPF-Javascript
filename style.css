@@ -1,0 +1,119 @@
+:root {
+  --title-color: #1a202c;
+  --highlights: #192fad;
+  --light-gray: #edf2f7;
+  --text: #718096;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+input,
+label {
+  font-family: 'Work Sans', sans-serif;
+}
+
+body {
+  margin-inline: auto;
+}
+
+p {
+  color: var(--text);
+}
+
+header {
+  height: 300px;
+  background: var(--light-gray);
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header h1 {
+  font-size: 3.75rem;
+  color: var(--title-color);
+  text-align: center;
+}
+
+header p {
+  font-size: 1.2rem;
+  max-width: 400px;
+  text-align: center;
+}
+
+strong {
+  color: var(--highlights);
+}
+
+form {
+  display: flex;
+  margin-inline: auto;
+  gap: 10px;
+  padding: 60px;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 400px;
+
+}
+
+label {
+  display: block;
+  font-size: 1.2rem;
+  color: var(--text);
+}
+
+input {
+  outline: none;
+  border: 2px solid RGBA(0, 0, 0, 0.06);
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 1.2rem;
+  color: var(--text);
+}
+
+input::placeholder {
+  color: RGBA(0, 0, 0, 0.3);
+}
+
+input:focus {
+  border: 2px solid var(--text);
+}
+
+button {
+  border: none;
+  width: 200px;
+  padding: 10px;
+  border-radius: 6px;
+  background: var(--highlights);
+  color: var(--light-gray);
+  font-weight: 800;
+}
+
+.alerts {
+  display: flex;
+  justify-content: center;
+}
+
+.alerts span {
+  text-align: center;
+  padding: 10px;
+  border-radius: 6px;
+  color: var(--light-gray);
+}
+
+span.sucess {
+  background: green;
+  display: none;
+}
+
+span.error {
+  background: red;
+  display: none;
+
+}

@@ -2,24 +2,35 @@
 <html lang="en">
 
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
   <title>Validador de CPF</title>
 </head>
 
 <body>
-  <h2>Validador de CPF</h2>
-  <form>
-    <label>CPF</label>
-    <input type='text' placeholder="000-000-000" id="cpf_digitado">
-    <button type="button" onclick="validacao()"> Verificar CPF</button>
-  </form>
+  <main>
+    <header>
+      <h1>Validador de <strong>CPF</strong></h1>
+      <p>Validador simples para o documento CPF (Cadastro de Pessoa Física)</p>
+    </header>
 
-  <div>
-    <h3 id="sucess" style="display: none">Oba, seu cpf é válido</h3>
-    <h3 id="failed" style="display: none">Infelizmente seu cpf não é válido</h3>
-  </div>
+    <form>
+      <label>Digite seu CPF</label>
+      <input type='text' placeholder=" 000.000.000-00 " id="cpf_digitado">
+      <button type="button" onclick="validacao()"> Verificar CPF</button>
+    </form>
+
+    <div class="alerts">
+      <span class="sucess" id="sucess">Oba, seu cpf é válido</span>
+      <span class="error" id="failed">Infelizmente seu cpf não é válido</span>
+    </div>
+  </main>
 </body>
 
 <script src="./script.js"></script>
